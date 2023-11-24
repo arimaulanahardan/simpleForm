@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="multistep_form.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <title>Form Pendaftaran PPI Jawa Barat</title>
+</head>
+
+<body>
+
+    <!-- MultiStep Form -->
+    <div class="container-fluid" id="grad1">
+        <div class="row justify-content-center mt-0">
+            <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
+                <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                    <h2><strong>Pembuatan Kartu Anggota PPI</strong></h2>
+                    <p>Isi Formulir dibawah ini dengan benar !!</p>
+                    <div class="row">
+                        <div class="col-md-12 mx-0">
+                            <form id="msform">
+                                <!-- progressbar -->
+                                <ul id="progressbar">
+                                    <li class="active" id="no_pendaftaran"><strong>Kode</strong></li>
+                                    <li id="personal"><strong>Personal</strong></li>
+                                    <li id="pendidikan"><strong>Pendidikan</strong></li>
+                                    <li id="pekerjaan"><strong>Pekerjaan</strong></li>
+                                    <li id="organisasi"><strong>Organisasi</strong></li>
+                                </ul>
+                                <!-- fieldsets -->
+
+                                <!-- form 1 | Akun Informations -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title">Kode Pendaftaran</h2>
+                                        <div class="otp-field mb-4">
+                                            <input type="number" class="input_otp" required/>
+                                            <input type="number" class="input_otp" />
+                                            <input type="number" class="input_otp" />
+                                            <input type="number" class="input_otp" />
+                                            <input type="number" class="input_otp" />
+                                            <input type="number" class="input_otp" />
+                                        </div>
+                                    </div>
+                                    <input type="button" name="next" class="next action-button" value="Next Step" />
+                                </fieldset>
+                                <!-- end Form 1 -->
+
+                                <!-- Form 2 | Data Diri Pribadi -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title">Data Pribadi</h2>
+                                        <div>
+                                            <input type="text" name="fname" placeholder="Nama Lengkap"/>
+                                            <input type="text" name="lname" placeholder="Nama Panggilan" />
+                                            <input type="number" name="ktp" placeholder="No. KTP" />
+                                            <input type="number" name="nra" placeholder="NRA">
+                                            <input type="text" name="email" placeholder="Email" />
+                                            <input type="number" name="telfon_rumah" placeholder="Telfon Rumah" />
+                                            <input type="number" name="hp" placeholder="No. HP" />
+                                        </div>
+
+                                        <div class="row mt-5">
+                                            <div class="col-7">
+                                                <input type="text" name="tl" placeholder="Tempat Lahir" />
+                                            </div>
+                                            <div class="col-5">
+                                                <input type="date" name="tgl" placeholder="Tanggal Lahir" />
+                                            </div>
+                                        </div>
+
+                                        <select class="list-dt col-9" required>
+                                            <option selected disabled value="">Jenis Kelamin</option>
+                                            <option>Laki-laki</option>
+                                            <option>Perempuan</option>
+                                        </select>
+                                        <!-- <div class="row mt-2">
+                                            <div class="col-7">
+                                                <input type="text" name="lname" placeholder="xxx" />
+                                            </div>
+                                            <div class="col-5">
+                                            </div>
+                                        </div> -->
+
+                                    
+
+                                        
+
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <select class="form-select" required>
+                                                    <option selected disabled value="">Agama</option>
+                                                    <option>Islam</option>
+                                                    <option>Kristen</option>
+                                                    <option>Katolik</option>
+                                                    <option>Hindu</option>
+                                                    <option>Budha</option>
+                                                    <option>Konghucu</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-6">
+                                                <select class="form-select" required>
+                                                    <option selected disabled value="">Status</option>
+                                                    <option>menikah</option>
+                                                    <option>belum menikah</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-5">
+                                            <div class="col-lg-6 col-md-6 col-12">
+                                                <input type="text" name="jln" placeholder="Nama Jalan/ no. rumah" />
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-6">
+                                                <input type="number" name="rt" placeholder="RT" />
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-6">
+                                                <input type="number" name="rw" placeholder="RW" />
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12 col-md-4 col-lg-4">
+                                                <input type="text" name="kelurahan" placeholder="Desa/Kelurahan" />
+                                            </div>
+                                            <div class="col-12 col-md-4 col-lg-4">
+                                                <input type="text" name="kecamatan" placeholder="Kecamatan" />
+                                            </div>
+                                            <div class="col-12 col-md-4 col-lg-4">
+                                                <input type="text" name="kota/kab" placeholder="Kota/Kab" />
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-8 col-6">
+                                                <input type="text" name="provinsi" placeholder="Provinsi" />
+                                            </div>
+                                            <div class="col-md-4 col-5">
+                                                <input type="number" name="kodepos" placeholder="Kode Pos" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" name="previous" class="previous action-button-previous"
+                                        value="Previous" />
+                                    <input type="button" name="next" class="next action-button" value="Next Step" />
+                                </fieldset>
+                                <!-- end Form 2 -->
+
+                                <!-- Form 3 | Pendidikan Terakhir -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title">Pendidikan</h2>
+
+                                        <div class="row">
+                                            <label for="#" class="mb-2" form-label>Pendidikan SMA/SMK</label>
+                                            <div class="col-md-8 col-12">
+                                                <input type="text" name="sma" placeholder="Nama Sekolah" />
+                                            </div>
+                                            <div class="col-md-4 col-12">
+                                                <input type="number" name="thnlls" placeholder="Tahun Lulus" />
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-3">
+                                            <label for="#" class="mb-2" form-label>Pendidikan S1/D4/D3</label>
+                                            <div class="col-md-8 col-12">
+                                                <input type="text" name="sma" placeholder="Nama Perguruan Tinggi" />
+                                            </div>
+                                            <div class="col-md-4 col-12">
+                                                <input type="number" name="thnlls" placeholder="Tahun Lulus" />
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-3">
+                                            <label for="#" class="mb-2" form-label>Pendidikan Pasca Sarjana/S2</label>
+                                            <div class="col-md-8 col-12">
+                                                <input type="text" name="sma" placeholder="Nama Perguruan Tinggi" />
+                                            </div>
+                                            <div class="col-md-4 col-12">
+                                                <input type="number" name="thnlls" placeholder="Tahun Lulus" />
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-3">
+                                            <label for="#" class="mb-2" form-label>Pendidikan Doctoral/S3</label>
+                                            <div class="col-md-8 col-12">
+                                                <input type="text" name="sma" placeholder="Nama Perguruan Tinggi" />
+                                            </div>
+                                            <div class="col-md-4 col-12">
+                                                <input type="number" name="thnlls" placeholder="Tahun Lulus" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" name="previous" class="previous action-button-previous"
+                                        value="Previous" />
+                                    <input type="button" name="next" class="next action-button" value="Next Step" />
+                                </fieldset>
+                                <!-- end Form 3 -->
+
+                                <!-- Form 4 | Pekerjaan -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title">Pekerjaan</h2>
+
+                                        <div class="row">
+                                            <div class="col-md-7 col-12">
+                                                <select class="form-select" required>
+                                                    <option selected disabled value="#">Nama Bidang Pekerjaan</option>
+                                                    <option>PNS</option>
+                                                    <option>TNI/Polri</option>
+                                                    <option>Karyawan Swasta</option>
+                                                    <option>Guru/Dosen</option>
+                                                    <option>Wirausaha</option>
+                                                    <option>Pelajar/Mahasiswa</option>
+                                                    <option>Profesional</option>
+                                                    <option>Ibu Rumah Tangga</option>
+                                                    <option>Lainnya</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-5 col-12">
+                                                <input type="text" name="pang/gol" placeholder="Pangkat/Golongan" />
+                                            </div>
+                                        </div>
+
+                                        <input type="text" name="Jabatan kerja" placeholder="Jabatan Pekerjaan" />
+
+                                    </div>
+                                    <input type="button" name="previous" class="previous action-button-previous"
+                                        value="Previous" />
+                                    <input type="button" name="next" class="next action-button" value="Next Step" />
+                                </fieldset>
+                                <!-- end Form 4 -->
+
+                                <!-- Form 5 | Organisasi -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title">Organisasi</h2>
+
+                                        <div class="row">
+                                            <div class="col-md-7 col-12">
+                                                <select class="form-select" required>
+                                                    <option selected disabled value="#">Jabatan Paskibraka</option>
+                                                    <option>Pengurus Pusat</option>
+                                                    <option>Pengurus Provinsi</option>
+                                                    <option>Pengurus Kabupaten/Kota</option>
+                                                    <option>Anggota Biasa</option>
+                                                    <option>Anggota Kehormatan</option>
+                                                    <option>Generasi Muda PPI</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-5 col-12">
+                                                <input type="number" name="thnpaskib" placeholder="Tahun Paskibraka" />
+                                            </div>
+                                        </div>
+                                        <input type="text" name="tkpaskib" placeholder="Tingkat Paskibraka" />
+                                    </div>
+                                    <input type="button" name="previous" class="previous action-button-previous"
+                                        value="Previous" />
+                                    <input type="button" name="send" class="next action-button" value="Confirm" />
+                                </fieldset>
+                                <!-- end Form 5 -->
+
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title text-center">Success !</h2>
+                                        <br></br>
+                                        <div class="row justify-content-center">
+                                            <div class="col-3">
+                                                <img src="https://img.icons8.com/color/96/000000/ok--v2.png"
+                                                    class="fit-image" />
+                                            </div>
+                                        </div>
+                                        <br></br>
+                                        <div class="row justify-content-center">
+                                            <div class="col-7 text-center">
+                                                <h5>Anda Berhasil Melakukan Pendaftaran</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+   
+
+    <!-- add script javascript on multistep_form.js -->
+    <script src="multistep_form.js"></script>
+
+</body>
+
+</html>
